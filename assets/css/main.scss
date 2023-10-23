@@ -1,0 +1,311 @@
+@import "sass/variables", "sass/mixins", "sass/global", "sass/navbar",
+  "sass/sidebar";
+
+/***************** Start Main Section ***************/
+.main_section {
+  display: flex;
+  justify-content: space-between;
+  // gap: 25px;
+  align-items: start;
+
+  .page_content {
+    width: calc(100% - 480px);
+    padding: 40px 30px 0;
+
+    @media screen and (max-width: $screen-lg) {
+      width: 100%;
+      padding: 20px 10px 0;
+    }
+  }
+
+  .main_line {
+    width: 100%;
+    margin: 25px 0;
+    height: 1px;
+    background-color: #caa5af;
+  }
+
+  .open_btn {
+    width: 44px;
+    height: 44px;
+    @include center;
+    font-size: 17px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: none;
+
+    @media screen and (max-width: $screen-lg) {
+      display: flex;
+    }
+
+    &.open_right {
+      background-color: $sec;
+      color: $white;
+    }
+
+    &.open_left {
+      background-color: #f5f4f1;
+      color: $black;
+    }
+  }
+}
+
+.overlay-m {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  display: none;
+  z-index: 1030;
+}
+/***************** End Main Section ***************/
+
+/***************** Start slider_img Section ***************/
+
+.slider_img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+
+  @media screen and (max-width: $screen-lg) {
+    height: 240px;
+    border-radius: 10px;
+  }
+}
+
+/***************** End slider_img Section ***************/
+
+/***************** Start Owl Dots ***************/
+
+.owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content !important;
+  margin: auto;
+  gap: 7px;
+  width: 100%;
+  margin-top: 20px;
+
+  .owl-dot {
+    width: 20px;
+    height: 2px;
+    background-color: $white2 !important;
+
+    @media screen and (max-width: $screen-md) {
+      width: 15px;
+    }
+
+    &.active {
+      opacity: 1;
+      background-color: $dark !important;
+    }
+  }
+}
+
+/***************** End Owl Dots ***************/
+
+/***************** Start Owl Nav ***************/
+.owl-nav {
+  position: absolute;
+  bottom: -11px;
+  // width: 200px;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+  .owl-next,
+  .owl-prev {
+    font-size: 16px !important;
+    color: #969696 !important;
+  }
+}
+/***************** End Owl Nav ***************/
+
+/***************** Start Section Header ***************/
+
+.section_header {
+  @include between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  .title {
+    font-size: 20px;
+    color: $main;
+    font-weight: 600;
+    align-self: auto;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 16px;
+    }
+  }
+
+  .select_head {
+    position: relative;
+
+    .select_h {
+      height: 44px;
+      border-radius: 12px;
+      border: 1px rgba(162, 148, 117, 0.2) solid;
+      padding: 12px;
+      width: 160px;
+      color: $main;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .main-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include dir-right(14px);
+      color: $main;
+      font-size: 13px;
+      cursor: pointer;
+      pointer-events: none;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+      max-width: 18px;
+    }
+  }
+}
+
+/***************** End Section Header ***************/
+
+/***************** Start topics card ***************/
+.topics_card {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $white;
+  border: 1px solid #e4e5e7;
+  position: relative;
+
+  .card_hint {
+    position: absolute;
+    top: 15px;
+    @include dir-left(15px);
+    padding: 7px 12px;
+    @include center;
+    gap: 7px;
+    font-size: 15px;
+    background-color: $main;
+    color: $white;
+    border-radius: 15px;
+    z-index: 5;
+
+    i {
+      font-size: 12px;
+    }
+  }
+
+  .img {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: $main-transition;
+    }
+  }
+
+  .topics_body {
+    padding: 15px;
+
+    .card_date {
+      font-size: 15px !important;
+      color: $dark;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .head {
+      font-size: 18px;
+      color: $black;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .desc {
+      font-size: 15px;
+      // line-height: 1.7;
+      color: $black;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  &.active {
+    padding: 20px;
+    border-radius: 25px;
+
+    .img {
+      border-radius: 15px;
+    }
+
+    .topics_body {
+      padding: 0;
+      padding-top: 15px;
+    }
+  }
+
+  &:hover {
+    .img {
+      img {
+        transform: scale(1.1) rotate(-3deg);
+      }
+    }
+  }
+}
+
+/***************** End topics card ***************/
+
+/***************** Start services_cards ***************/
+
+.services_cards {
+  @include grid(180px, 20px);
+
+  .services_card {
+    background-color: #67a9c3;
+    color: $white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    padding: 25px 15px;
+    transition: $main-transition;
+
+    .icon {
+      max-width: 18px;
+    }
+
+    &.color,
+    &:hover {
+      background-color: #4194b2;
+    }
+  }
+}
+
+/***************** End services_cards ***************/
+
+/***************** Start Copy Footer ***************/
+.copy {
+  text-align: center;
+  color: $dark;
+  padding: 15px;
+  border-top: 1px solid #eaeaea;
+  margin-top: 25px;
+  font-weight: 600;
+}
+/***************** End Copy Footer ***************/

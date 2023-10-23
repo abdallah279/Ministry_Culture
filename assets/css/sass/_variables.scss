@@ -1,0 +1,60 @@
+$ltr: 'html[lang="en"]';
+$rtl: 'html[lang="ar"]';
+/*********************************************************
+  // global color variables
+**********************************************************/
+
+// colors
+
+$main: #4293b5;
+$sec: #891538;
+$dark: #8f5969;
+$dark2: #5b5b5b;
+$white: #fff;
+$white2: #E6E6E6;
+$white3: #FAFAFA;
+$black: #202020;
+$black2: #000;
+$light: #F6F6F8;
+$red: #D00000;
+$orange: #46AB4D;
+$border-color: #DEDEDE;
+$placholder-color: #adabab;
+$icon-color: #b1b0b0;
+$side-color: #939393;
+$text-color: #9EA0A4;
+$main-shadow: 0 0 10px 0 rgba($color: $black, $alpha: 10%);
+$sec-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+$side-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+$nav-shadow: 0 3px 16px rgb(133 133 133 / 5%);
+$text-shadow: 0 2px 2px rgba($color: $dark, $alpha: .1);
+$img-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 25%);
+$main-transition: all .3s ease;
+
+
+/*********************************************************
+  // Font variables
+**********************************************************/
+
+$font-normal: 'HSDream-Light', sans-serif, 'Font Awesome 5 Free';
+
+/*********************************************************
+  // spacing variables
+**********************************************************/
+// these variable/s is still not applied on all elements
+
+$space-between: 20px;
+$spacer: 10px;
+
+/*********************************************************
+  // screens
+**********************************************************/
+$screen-xxl: 1720px;
+$screen-xx: 1600px;
+$screen-xl: 1280px;
+$screen-lg2: 1200px;
+$screen-lg: 992px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 425px;
+$screen-xxs: 375px;
