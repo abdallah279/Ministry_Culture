@@ -16,6 +16,8 @@
   @include dir-left(0);
   top: 113px;
   padding-bottom: 120px;
+  z-index: 10;
+
 
   @media screen and (max-width: $screen-lg) {
     position: fixed;

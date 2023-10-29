@@ -1,0 +1,17 @@
+@import "../assets/css/sass/_variables.scss", "../assets/css/sass/mixins.scss", "../assets/css/sass/_global.scss";
+
+/***************** Start slider_img Section ***************/
+
+.slider_img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+
+  @media screen and (max-width: $screen-lg) {
+    height: 240px;
+    border-radius: 10px;
+  }
+}
+
+/***************** End slider_img Section ***************/

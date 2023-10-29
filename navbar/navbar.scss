@@ -6,6 +6,11 @@
   padding: 10px 0;
   background-color: white;
   border-bottom: 1px rgba(162, 148, 117, 0.4) solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
   .content {
     width: 100%;
     display: flex;
