@@ -1,0 +1,30 @@
+@import "../assets/css/sass/_variables.scss", "../assets/css/sass/mixins.scss",
+  "../assets/css/sass/_global.scss";
+/***************** Start services_cards ***************/
+
+.services_cards {
+  @include grid(180px, 20px);
+
+  .services_card {
+    background-color: #67a9c3;
+    color: $white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    padding: 25px 15px;
+    transition: $main-transition;
+
+    .icon {
+      max-width: 18px;
+    }
+
+    &.color,
+    &:hover {
+      background-color: #4194b2;
+    }
+  }
+}
+
+/***************** End services_cards ***************/

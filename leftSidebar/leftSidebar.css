@@ -68,7 +68,7 @@ body {
   overflow-x: hidden;
   background-color: #fff;
   position: relative;
-  padding-top: 110px;
+  padding-top: 145px;
 }
 html[lang=en] body {
   direction: ltr;
@@ -233,7 +233,7 @@ input:focus {
 }
 .page_content {
   width: calc(100% - 480px);
-  padding: 40px 30px 0;
+  padding: 0 30px;
   margin: 0 auto;
 }
 @media screen and (max-width: 992px) {
@@ -292,6 +292,106 @@ input:focus {
   z-index: 1030;
 }
 
+/***************** Start Owl Dots ***************/
+.owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  margin: auto;
+  gap: 7px;
+  width: 100%;
+  margin-top: 20px;
+}
+.owl-dots .owl-dot {
+  width: 20px;
+  height: 2px;
+  background-color: #E6E6E6 !important;
+}
+@media screen and (max-width: 768px) {
+  .owl-dots .owl-dot {
+    width: 15px;
+  }
+}
+.owl-dots .owl-dot.active {
+  opacity: 1;
+  background-color: #8f5969 !important;
+}
+
+/***************** End Owl Dots ***************/
+/***************** Start Owl Nav ***************/
+.owl-nav {
+  position: absolute;
+  bottom: -11px;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.owl-nav .owl-next,
+.owl-nav .owl-prev {
+  font-size: 16px !important;
+  color: #969696 !important;
+}
+
+/***************** End Owl Nav ***************/
+/***************** Start Section Header ***************/
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.section_header .title {
+  font-size: 20px;
+  color: #4293b5;
+  font-weight: 600;
+  align-self: auto;
+}
+@media screen and (max-width: 576px) {
+  .section_header .title {
+    font-size: 16px;
+  }
+}
+.section_header .select_head {
+  position: relative;
+}
+.section_header .select_head .select_h {
+  height: 44px;
+  border-radius: 12px;
+  border: 1px rgba(162, 148, 117, 0.2) solid;
+  padding: 12px;
+  width: 160px;
+  color: #4293b5;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+.section_header .select_head .main-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4293b5;
+  font-size: 13px;
+  cursor: pointer;
+  pointer-events: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  max-width: 18px;
+}
+html[lang=en] .section_header .select_head .main-icon {
+  right: 14px;
+}
+html[lang=ar] .section_header .select_head .main-icon {
+  left: 14px;
+}
+
+/***************** End Section Header ***************/
 /******************* Start left_sidebar ********************/
 .left_sidebar {
   width: 240px;

@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
   background-color: $white;
   position: relative;
-  padding-top: 110px;
+  padding-top: 145px;
 
   #{$ltr} & {
     direction: ltr;
@@ -186,15 +186,9 @@ input:focus {
   }
 }
 
-// @media(min-width: 1400px) {
-//     .container {
-//         max-width: 1370px;
-//     }
-// }
-
 .page_content {
   width: calc(100% - 480px);
-  padding: 40px 30px 0;
+  padding: 0 30px ;
   margin: 0 auto;
 
   @media screen and (max-width: $screen-lg) {
@@ -249,3 +243,105 @@ input:focus {
   display: none;
   z-index: 1030;
 }
+
+
+/***************** Start Owl Dots ***************/
+
+.owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content !important;
+  margin: auto;
+  gap: 7px;
+  width: 100%;
+  margin-top: 20px;
+
+  .owl-dot {
+    width: 20px;
+    height: 2px;
+    background-color: $white2 !important;
+
+    @media screen and (max-width: $screen-md) {
+      width: 15px;
+    }
+
+    &.active {
+      opacity: 1;
+      background-color: $dark !important;
+    }
+  }
+}
+
+/***************** End Owl Dots ***************/
+
+/***************** Start Owl Nav ***************/
+.owl-nav {
+  position: absolute;
+  bottom: -11px;
+  // width: 200px;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+  .owl-next,
+  .owl-prev {
+    font-size: 16px !important;
+    color: #969696 !important;
+  }
+}
+/***************** End Owl Nav ***************/
+
+/***************** Start Section Header ***************/
+
+.section_header {
+  @include between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  .title {
+    font-size: 20px;
+    color: $main;
+    font-weight: 600;
+    align-self: auto;
+
+    @media screen and (max-width: $screen-sm) {
+      font-size: 16px;
+    }
+  }
+
+  .select_head {
+    position: relative;
+
+    .select_h {
+      height: 44px;
+      border-radius: 12px;
+      border: 1px rgba(162, 148, 117, 0.2) solid;
+      padding: 12px;
+      width: 160px;
+      color: $main;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .main-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include dir-right(14px);
+      color: $main;
+      font-size: 13px;
+      cursor: pointer;
+      pointer-events: none;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 0;
+      max-width: 18px;
+    }
+  }
+}
+
+/***************** End Section Header ***************/

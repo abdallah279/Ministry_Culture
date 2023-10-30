@@ -1,0 +1,14 @@
+@import "../assets/css/sass/_variables.scss", "../assets/css/sass/mixins.scss",
+  "../assets/css/sass/_global.scss";
+
+
+/***************** Start Copy Footer ***************/
+.copy {
+  text-align: center;
+  color: $dark;
+  padding: 15px;
+  border-top: 1px solid #eaeaea;
+  margin-top: 25px;
+  font-weight: 600;
+}
+/***************** End Copy Footer ***************/
